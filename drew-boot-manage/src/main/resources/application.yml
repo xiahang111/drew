@@ -1,0 +1,38 @@
+server:
+  port: 8084
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 0
+      max-file-size: 100MB
+      max-request-size: 100MB
+  application:
+    name: boot-manage-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/drew_db
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 10
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+
+image:
+  upload:
+    path: "../images/"
+
+
