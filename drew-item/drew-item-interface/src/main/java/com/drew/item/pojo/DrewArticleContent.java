@@ -2,11 +2,16 @@ package com.drew.item.pojo;
 
 import com.drew.item.d_enum.IsDeletedEnum;
 
+import javax.persistence.Column;
+import javax.persistence.Enumerated;
+
 public class DrewArticleContent {
 
     private Long id;
     private Long articleInfoId;
     private String articleContent;
+
+    @Enumerated
     private IsDeletedEnum isDeleted;
 
     public Long getId() {

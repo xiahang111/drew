@@ -1,0 +1,42 @@
+{
+  "status": 200,
+  "message": "success",
+  "data": [
+    {
+      "articleInfoId": 16,
+      "articleContentId": 6,
+      "articleHeadline": "Spring 框架的前世今生",
+      "articleCategoryId": 3,
+      "articleCategoryName": "后端程序",
+      "articleAuthor": "andrew",
+      "articleImgUrl": "/editorImages/20190624213453_68.jpg",
+      "articleVisitor": 102,
+      "articleComments": [
+      ],
+      "articleCommentsNum": 0,
+      "articleContent": "<p>\r\n\t<span style=\"background-color:#FF9900;color:#666666;\">Spring 框架的前世今生</span> \r\n</p>\r\n<p>\r\n\t<br />\r\n</p>\r\n<h3>\r\n\t<strong>Spring 框架所不为人知的一面</strong> \r\n</h3>",
+      "articleDescription": "",
+      "articleTags": [
+      ],
+      "articleDate": "2019-06-24"
+    },
+    {
+      "articleInfoId": 17,
+      "articleContentId": 7,
+      "articleHeadline": "测试文章：细说java中的设计模式",
+      "articleCategoryId": 4,
+      "articleCategoryName": "前端相关",
+      "articleAuthor": "andrew",
+      "articleImgUrl": "/editorImages/20190624213453_68.jpg",
+      "articleVisitor": 345,
+      "articleComments": [
+      ],
+      "articleCommentsNum": 0,
+      "articleContent": "<p>\r\n\t测试文章：细说java中的设计模式\r\n</p>\r\n<p>\r\n\t测试文章：细说java中的设计模式\r\n</p>\r\n<p>\r\n\t测试文章：细说java中的设计模式\r\n</p>\r\n<p>\r\n\t测试文章：细说java中的设计模式\r\n</p>\r\n<p>\r\n\t测试文章：细说java中的设计模式\r\n</p>\r\n<p>\r\n\t测试文章：细说java中的设计模式\r\n</p>\r\n<p>\r\n\t测试文章：细说java中的设计模式\r\n</p>",
+      "articleDescription": "",
+      "articleTags": [
+      ],
+      "articleDate": "2019-06-24"
+    }
+  ]
+}

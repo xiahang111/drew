@@ -3,6 +3,9 @@ package com.drew.handler;
 import com.drew.item.d_enum.BaseEnum;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
+import org.apache.ibatis.type.MappedJdbcTypes;
+import org.apache.ibatis.type.MappedTypes;
+import org.springframework.stereotype.Component;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
@@ -11,6 +14,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class BaseEnumTypeHandler<E extends BaseEnum> extends BaseTypeHandler<E> {
 
     private Class<E> enumType;

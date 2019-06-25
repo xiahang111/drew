@@ -1,6 +1,7 @@
 package com.drew.controller;
 
 import com.drew.entity.ResponseResult;
+import com.drew.item.dto.ArticleBlogDTO;
 import com.drew.item.pojo.DrewArticleInfo;
 import com.drew.service.DrewArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,20 +25,22 @@ public class DrewArticleController {
     @Autowired
     private DrewArticleService drewArticleService;
 
-    @RequestMapping("getAll")
+    @RequestMapping("getAll-blog")
     @ResponseBody
     public ResponseResult getAllDrewArticle() {
 
-        List<DrewArticleInfo> drewArticleInfos = drewArticleService.getAllDrewArticleInfo();
+        try {
 
-        DrewArticleInfo info = new DrewArticleInfo();
-        info.setArticleAuthor("drew");
-        info.setArticleDate(new Date());
-        info.setArticleHeadline("好消息好消息！");
-        info.setArticleTag("1");
-        drewArticleInfos.add(info);
+            List<ArticleBlogDTO> articleBlogDTOS = drewArticleService.getAllBlogDrewArticleInfo();
 
-        return new ResponseResult(drewArticleInfos);
+            return new ResponseResult(articleBlogDTOS);
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+            return new ResponseResult(500,e.getMessage(),null);
+        }
+
 
     }
 
@@ -56,15 +59,13 @@ public class DrewArticleController {
 
         try {
 
-            drewArticleService.addArticle(title,articleContent,"andrew",category,tags,visibility);
+            drewArticleService.addArticle(title,articleContent,"andrew",category,tags,visibility,articlePic);
 
             resp.sendRedirect("http://localhost:8084/article.html");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
 
 
     }

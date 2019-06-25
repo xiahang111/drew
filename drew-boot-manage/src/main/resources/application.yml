@@ -14,7 +14,7 @@ spring:
   application:
     name: boot-manage-service
   datasource:
-    url: jdbc:mysql://localhost:3306/drew_db
+    url: jdbc:mysql://localhost:3306/drew_db?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: root
     hikari:
@@ -34,5 +34,6 @@ eureka:
 image:
   upload:
     path: "../images/"
-
-
+mybatis:
+  type-handlers-package: com.drew.handler
+  type-aliases-package: com.drew.item.pojo

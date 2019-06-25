@@ -19,6 +19,7 @@ zuul:
     item-service: /item/**
     static-service: /static/**
     boot-manage-service: /manage/**
+    boot-web-service: /web/**
 ribbon:
   ConnectTimeout: 2500 # 连接超时时间(ms)
   ReadTimeout: 2000 # 通信超时时间(ms)

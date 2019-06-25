@@ -1,5 +1,6 @@
 package com.drew.item.pojo;
 
+import javax.persistence.Column;
 import java.util.Date;
 
 public class DrewArticleInfo {
@@ -10,7 +11,11 @@ public class DrewArticleInfo {
     private Integer articleVisitor; //文章浏览人数
     private String articleTag; //文章标签
     private String articleAuthor; //文章作者
-    private int articleCategoryId;
+
+    @Column(name = "article_category_id")
+    private Integer articleCategoryId;
+
+    private String articleImgUrl;
     private Date createTime; //创建时间
     private Date updateTime; //修改时间
 
@@ -85,4 +90,16 @@ public class DrewArticleInfo {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
+    public String getArticleImgUrl() {
+        return articleImgUrl;
+    }
+
+    public void setArticleImgUrl(String articleImgUrl) {
+        this.articleImgUrl = articleImgUrl;
+
+
+    }
+
+
 }

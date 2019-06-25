@@ -33,4 +33,5 @@ public class ResponseResult {
 
         this.data = data;
     }
+
 }

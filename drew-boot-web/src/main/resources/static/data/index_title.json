@@ -1,0 +1,126 @@
+{"index_title":{
+  "state": 200,
+  "message": "success",
+  "data": [{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "技术总结",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "资料分享",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "资料分享",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "技术总结",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "技术总结",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "资料分享",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "技术总结",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "资料分享",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "技术总结",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "资料分享",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  },{
+    "date": "2019-06-17 22:00:00",
+    "visit": 176,
+    "discuss": 32,
+    "headLine": "Java如何判断一个日期的格式是否是正确的",
+    "title_tag": "技术总结",
+    "content": "可以用strtotime()把日期（$date）转成时间戳，再用date()按需要验证的格式转成一个日期，来跟$date比较是否相同来验证这个日期的格式是否是正确的。所以要验证日期格式 ..."
+
+  }]
+
+
+},
+  "hot_title": {
+
+  "status": 200,
+  "message": "success",
+  "data": [{
+    "img_url": "images/excerpt.jpg",
+    "title_url": "article.html",
+    "head_line": "JAVA如何判断一个日期格式是否正确",
+    "date": "2019-06-18 12:00:00",
+    "visit": 120
+  },{
+    "img_url": "images/excerpt.jpg",
+    "title_url": "article.html",
+    "head_line": "JAVA如何判断一个日期格式是否正确",
+    "date": "2019-06-18 12:00:00",
+    "visit": 120
+  },{
+    "img_url": "images/excerpt.jpg",
+    "title_url": "article.html",
+    "head_line": "JAVA如何判断一个日期格式是否正确",
+    "date": "2019-06-18 12:00:00",
+    "visit": 120
+  },{
+    "img_url": "images/excerpt.jpg",
+    "title_url": "article.html",
+    "head_line": "JAVA如何判断一个日期格式是否正确",
+    "date": "2019-06-18 12:00:00",
+    "visit": 120
+  }]
+
+  }
+}

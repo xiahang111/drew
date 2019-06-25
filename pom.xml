@@ -10,6 +10,7 @@
         <module>drew-common</module>
         <module>drew-static-service</module>
         <module>drew-boot-manage</module>
+        <module>drew-boot-web</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

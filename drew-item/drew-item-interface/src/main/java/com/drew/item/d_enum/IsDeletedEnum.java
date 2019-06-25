@@ -2,8 +2,8 @@ package com.drew.item.d_enum;
 
 public enum IsDeletedEnum implements BaseEnum {
 
-    CONFIRM_DELETED(1, "已删除"),
-    NOT_DELETED(2, "未删除");
+    CONFIRM_DELETED(0, "已删除"),
+    NOT_DELETED(1, "未删除");
 
     private int value;
     private String description;
