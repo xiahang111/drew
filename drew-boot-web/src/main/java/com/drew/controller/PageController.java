@@ -41,5 +41,11 @@ public class PageController {
         return "category";
     }
 
+    @RequestMapping("/discussion")
+    public String todiscussion(){
+
+        return "discussion";
+    }
+
 
 }

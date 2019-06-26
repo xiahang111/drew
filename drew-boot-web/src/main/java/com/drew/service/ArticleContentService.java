@@ -43,6 +43,8 @@ public class ArticleContentService {
 
         ArticleBlogDTO articleBlogDTO = new ArticleBlogDTO(drewArticleInfo, drewArticleContent, drewArticleComments);
 
+        articleBlogDTO.setArticleCategoryName(drewCategoryMapper.getNameById((long) drewArticleInfo.getArticleCategoryId()));
+
         return articleBlogDTO;
 
     }

@@ -22,7 +22,7 @@ spring:
       minimum-idle: 10
   thymeleaf:
     cache: false
-    prefix: classpath:/static/
+    prefix: classpath:/templates/
 eureka:
   client:
     service-url:

@@ -9,6 +9,7 @@ public class ResponseResult {
     public Object data;
 
     public static ResponseResult error = new ResponseResult(500,"fail",null);
+    public static ResponseResult success = new ResponseResult(200,"success",null);
 
     public ResponseResult(){
         this.status = 200;
