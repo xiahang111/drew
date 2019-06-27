@@ -15,4 +15,7 @@ public interface DrewCategoryMapper extends Mapper<DrewCategory> {
     @Select("SELECT category_name from drew_category where category_parent_id = #{parentId}")
     List<String> getNamesByParentId(Long parentId);
 
+    @Select("SELECT id from drew_category where category_parent_id = #{parentId}")
+    List<String> getIdsByParentId(Long parentId);
+
 }

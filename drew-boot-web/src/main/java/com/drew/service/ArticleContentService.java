@@ -4,10 +4,7 @@ import com.drew.item.dto.ArticleBlogDTO;
 import com.drew.item.pojo.DrewArticleComment;
 import com.drew.item.pojo.DrewArticleContent;
 import com.drew.item.pojo.DrewArticleInfo;
-import com.drew.mapper.DrewArticleCommentMapper;
-import com.drew.mapper.DrewArticleContentMapper;
-import com.drew.mapper.DrewArticleInfoMapper;
-import com.drew.mapper.DrewCategoryMapper;
+import com.drew.mapper.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,6 +30,9 @@ public class ArticleContentService {
     @Autowired
     private DrewCategoryMapper drewCategoryMapper;
 
+    @Autowired
+    private DrewTagMapper drewTagMapper;
+
     public ArticleBlogDTO getArticleByArticleId(String articleId) {
 
         DrewArticleInfo drewArticleInfo = drewArticleInfoMapper.selectByArticleId(Long.parseLong(articleId));
@@ -44,6 +44,16 @@ public class ArticleContentService {
         ArticleBlogDTO articleBlogDTO = new ArticleBlogDTO(drewArticleInfo, drewArticleContent, drewArticleComments);
 
         articleBlogDTO.setArticleCategoryName(drewCategoryMapper.getNameById((long) drewArticleInfo.getArticleCategoryId()));
+
+        String articleTag = drewArticleInfo.getArticleTag();
+
+        if (!StringUtils.isEmpty(articleTag)){
+            List<String> articleTagNames = new ArrayList<>();
+            List<String> articleTags = Arrays.asList(articleTag.split(","));
+
+            articleTagNames = drewTagMapper.getTagNameByIds(articleTags);
+            articleBlogDTO.setArticleTags(articleTagNames);
+        }
 
         return articleBlogDTO;
 
@@ -58,8 +68,10 @@ public class ArticleContentService {
         if (StringUtils.isEmpty(categoryId)) {
             drewArticleInfos = drewArticleInfoMapper.selectAll();
         } else {
-            drewArticleInfos = drewArticleInfoMapper.selectByCategoryId(Integer.parseInt(categoryId));
-
+            //获取分类下的所有子分类
+            List<String> categoryIds = drewCategoryMapper.getIdsByParentId(Long.parseLong(categoryId));
+            categoryIds.add(categoryId);
+            drewArticleInfos = drewArticleInfoMapper.selectByCategoryIds(categoryIds);
         }
 
         List<DrewArticleContent> drewArticleContents = drewArticleContentMapper.selectAll();

@@ -30,6 +30,12 @@ $(document).ready(function () {
         var html_article_content = data['articleContent'];
         $('#article-content').append(html_article_content);
 
+        var html_article_tag = '';
+        $.each(result["data"]['articleTags'], function (i, item1) {
+            html_article_tag += '<a href="" rel="tag">'+item1;
+        });
+        $('.article-tags').append(html_article_tag);
+
     });
 
     /*获取评论并展示*/
@@ -53,4 +59,50 @@ $(document).ready(function () {
     });
 
 });
+
+/*文章评论*/
+$(function(){
+    $("#comment-submit").click(function(){
+        var commentContent = $("#comment-textarea");
+        var commentButton = $("#comment-submit");
+        var promptBox = $('.comment-prompt');
+        var promptText = $('.comment-prompt-text');
+        var articleid = $('.articleid').val();
+        promptBox.fadeIn(400);
+        if(commentContent.val() === ''){
+            promptText.text('请留下您的评论');
+            return false;
+        }
+        commentButton.attr('disabled',true);
+        commentButton.addClass('disabled');
+        promptText.text('正在提交...');
+        $.ajax({
+            type:"POST",
+            url:"/comment/addcomment?articleId=" + articleid,
+            //url:"/Article/comment/id/" + articleid,
+            data:"comment=" + replace_em(commentContent.val()),
+            cache:false, //不缓存此页面
+            success:function(data){
+                promptText.text('评论成功!');
+                commentContent.val(null);
+                $(".commentlist").fadeIn(300);
+                /*$(".commentlist").append();*/
+                commentButton.attr('disabled',false);
+                commentButton.removeClass('disabled')
+                window.location.reload();
+            }
+        });
+        /*$(".commentlist").append(replace_em(commentContent.val()));*/
+        promptBox.fadeOut(100);
+        return false;
+    });
+});
+
+//对文章内容进行替换
+function replace_em(str){
+    str = str.replace(/\</g,'&lt;');
+    str = str.replace(/\>/g,'&gt;');
+    str = str.replace(/\[em_([0-9]*)\]/g,'<img src="/static/images/arclist/$1.gif" border="0" />');
+    return str;
+}
 

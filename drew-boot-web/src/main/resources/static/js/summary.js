@@ -1,6 +1,18 @@
+
+var categoryId = "";
+
 $(document).ready(function () {
 
-    $.getJSON('/data/article.json',function (result) {
+    $.ajax({
+        type: 'HEAD', // 获取头信息，type=HEAD即可
+        url: window.location.href,
+        async: false,
+        success: function (data, status, xhr) {
+            categoryId = xhr.getResponseHeader("categoryId");
+        }
+    });
+
+    $.getJSON('/article/getArticles',{categoryId:categoryId},function (result) {
 
         var html_article = '';
 

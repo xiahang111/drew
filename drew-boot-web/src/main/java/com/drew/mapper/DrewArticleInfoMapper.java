@@ -18,6 +18,19 @@ public interface DrewArticleInfoMapper extends Mapper<DrewArticleInfo> {
             " from drew_article_info WHERE article_category_id = #{categoryId}")
     List<DrewArticleInfo> selectByCategoryId(@Param("categoryId") Integer categoryId);
 
+    @Select({
+            "<script>",
+            "select",
+            "id,article_headline,article_date,article_visitor,article_tag,article_category_id,article_author,article_img_url,create_time,update_time",
+            "from drew_article_info",
+            "where article_category_id in",
+            "<foreach collection='categoryIds' item='categoryId' open='(' separator=',' close=')'>",
+            "#{categoryId}",
+            "</foreach>",
+            "</script>"
+    })
+    List<DrewArticleInfo> selectByCategoryIds(@Param("categoryIds") List<String> categoryIds);
+
 
 
 
